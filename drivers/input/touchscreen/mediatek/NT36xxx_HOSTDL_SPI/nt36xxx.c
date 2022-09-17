@@ -44,7 +44,11 @@
 #include <linux/jiffies.h>
 #endif /* #if NVT_TOUCH_ESD_PROTECT */
 
-
+#if WAKEUP_GESTURE
+#ifdef CONFIG_TOUCHSCREEN_COMMON
+#include <linux/input/tp_common.h>
+#endif
+#endif
 
 #if WAKEUP_GESTURE
 #ifdef CONFIG_TOUCHSCREEN_COMMON
